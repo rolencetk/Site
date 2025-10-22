@@ -108,80 +108,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="accueil" class="h-full flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc6 50%, #d4c4a8 100%);">
-        <!-- Old Torn Newspaper Background -->
-        <div class="absolute inset-0 opacity-80">
-            <!-- Newspaper Fragment 1 - Top Left -->
-            <div class="absolute top-0 left-0 w-96 h-80 transform -rotate-12" style="background: #f9f7f4; border: 2px solid #d4c4a8;">
-                <div class="p-4 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-lg font-bold mb-2 border-b border-gray-400">LA GAZZETTA</div>
-                    <div class="text-xs text-gray-600 mb-3">Roma, 15 Marzo 1985</div>
-                    <div class="font-bold text-sm mb-2">TECNOLOGIA AVANZA</div>
-                    <div class="mb-2">I computer personali stanno rivoluzionando il modo di lavorare negli uffici italiani. Le aziende investono in nuove tecnologie per migliorare la produttività.</div>
-                    <div class="w-20 h-16 bg-gray-300 float-left mr-2 mb-1"></div>
-                    <div>Milano - Il settore informatico cresce del 30% quest'anno. Le startup tecnologiche aprono nuovi uffici nel nord Italia, creando migliaia di posti di lavoro.</div>
-                </div>
-            </div>
+<section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden">
 
-            <!-- Newspaper Fragment 2 - Top Right -->
-            <div class="absolute top-10 right-0 w-80 h-72 transform rotate-6" style="background: #f8f6f2; border: 2px solid #c9b896;">
-                <div class="p-4 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-lg font-bold mb-2 border-b border-gray-400">IL MESSAGGERO</div>
-                    <div class="text-xs text-gray-600 mb-3">Napoli, 22 Agosto 1987</div>
-                    <div class="font-bold text-sm mb-2">DESIGN ITALIANO NEL MONDO</div>
-                    <div class="mb-2">L'arte del design made in Italy conquista i mercati internazionali. Architetti e designer italiani firmano progetti prestigiosi.</div>
-                    <div class="w-16 h-12 bg-gray-200 float-right ml-2 mb-1"></div>
-                    <div>Firenze - La creatività italiana si distingue per eleganza e innovazione. Musei e gallerie espongono opere di giovani artisti emergenti.</div>
-                </div>
-            </div>
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="videos/background.mp4" type="video/mp4">
+  </video>
 
-            <!-- Newspaper Fragment 3 - Center Left -->
-            <div class="absolute top-1/3 left-20 w-72 h-64 transform -rotate-6" style="background: #f7f5f1; border: 2px solid #b8a082;">
-                <div class="p-3 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-base font-bold mb-2 border-b border-gray-400">CORRIERE SERA</div>
-                    <div class="text-xs text-gray-600 mb-2">Torino, 5 Novembre 1983</div>
-                    <div class="font-bold text-sm mb-1">INNOVAZIONE DIGITALE</div>
-                    <div class="mb-2">Le prime reti di computer collegano università e centri di ricerca. Nasce l'era della comunicazione digitale.</div>
-                    <div class="w-18 h-14 bg-gray-300 float-left mr-2"></div>
-                    <div>Bologna - Studenti e professori sperimentano nuove forme di collaborazione attraverso sistemi informatici avanzati.</div>
-                </div>
-            </div>
+  <!-- Overlay color (شفافية خفيفة لإبراز النص) -->
+  <div class="absolute inset-0 bg-[#375666]/70"></div>
 
-            <!-- Newspaper Fragment 4 - Bottom Right -->
-            <div class="absolute bottom-20 right-16 w-88 h-60 transform rotate-8" style="background: #f6f4f0; border: 2px solid #a69478;">
-                <div class="p-4 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-lg font-bold mb-2 border-b border-gray-400">LA REPUBBLICA</div>
-                    <div class="text-xs text-gray-600 mb-3">Venezia, 12 Dicembre 1986</div>
-                    <div class="font-bold text-sm mb-2">ARTE E TECNOLOGIA</div>
-                    <div class="mb-2">Artisti contemporanei utilizzano computer per creare opere d'arte digitale. Nasce una nuova forma espressiva.</div>
-                    <div class="w-20 h-16 bg-gray-200 float-right ml-2 mb-1"></div>
-                    <div>Palermo - Gallerie d'arte moderna ospitano mostre dedicate all'arte digitale. Critici e collezionisti mostrano grande interesse.</div>
-                </div>
-            </div>
+  <!-- Content فوق الفيديو -->
+  <div class="relative z-10 text-center text-[#D4D2C9]">
+    <img src="images/logo.png" alt="RÊVOLA DESIGN Logo" class="mx-auto w-32 mb-4 animate-spin-slow">
+    <h1 class="text-5xl font-[Beautifully_Delicious] tracking-wide">RÊVOLA DESIGN</h1>
+    <p class="mt-4 text-lg font-[Afeesh]">لكل فكرة تصميم… ولكل تصميم لمسة من RÊVOLA</p>
+    <button class="mt-6 px-6 py-2 bg-[#84ABB4]/80 hover:bg-[#84ABB4] rounded-full text-[#000] transition">
+      Sign up
+    </button>
+  </div>
 
-            <!-- Newspaper Fragment 5 - Bottom Left -->
-            <div class="absolute bottom-0 left-32 w-76 h-56 transform -rotate-3" style="background: #f8f6f3; border: 2px solid #c2b088;">
-                <div class="p-3 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-base font-bold mb-2 border-b border-gray-400">IL GIORNALE</div>
-                    <div class="text-xs text-gray-600 mb-2">Genova, 8 Febbraio 1984</div>
-                    <div class="font-bold text-sm mb-1">FUTURO DIGITALE</div>
-                    <div class="mb-2">Esperti prevedono che i computer diventeranno parte integrante della vita quotidiana entro il 2000.</div>
-                    <div class="w-16 h-12 bg-gray-300 float-left mr-2"></div>
-                    <div>Catania - Ricercatori sviluppano software innovativi per semplificare il lavoro d'ufficio e la gestione domestica.</div>
-                </div>
-            </div>
+</section>
 
-            <!-- Newspaper Fragment 6 - Center -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-64 h-48" style="background: #f5f3ef; border: 2px solid #9d8f73;">
-                <div class="p-3 font-serif text-xs leading-tight text-gray-800">
-                    <div class="text-sm font-bold mb-1 border-b border-gray-400">STAMPA SERA</div>
-                    <div class="text-xs text-gray-600 mb-2">Bari, 30 Giugno 1988</div>
-                    <div class="font-bold text-xs mb-1">GRAFICA COMPUTERIZZATA</div>
-                    <div class="mb-1">Designer utilizzano software per creare loghi e pubblicità. La grafica digitale rivoluziona il settore.</div>
-                    <div class="w-14 h-10 bg-gray-200 float-right ml-1"></div>
-                    <div class="text-xs">Studi creativi investono in workstation grafiche per progetti sempre più sofisticati.</div>
-                </div>
-            </div>
+    
 
             <!-- Additional scattered text fragments -->
             <div class="absolute top-16 left-1/3 transform rotate-45 text-xs font-serif text-gray-600 opacity-60">
