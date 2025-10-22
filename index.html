@@ -110,45 +110,34 @@
     <!-- Hero Section -->
 <section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden">
 
-  <!-- Video Background -->
+  <!-- 🎥 خلفية الفيديو -->
   <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-    <source src="videos/background.mp4.mp4" type="video/mp4">
+    <source src="videos/background.mp4" type="video/mp4">
     متصفحك لا يدعم عرض الفيديو.
   </video>
 
+  <!-- 🌫️ طبقة شفافة خفيفة فوق الفيديو (اختياري لتوضيح النص) -->
+  <div class="absolute inset-0 bg-[#f4f1e8]/30"></div>
+
+  <!-- 🩷 المحتوى -->
+  <div class="text-center z-10 fade-in">
+    <h1 class="lovelo-font text-4xl md:text-6xl text-dark mb-6">
+      ROLENCE
+    </h1>
+    <p class="text-lg md:text-xl text-secondary mb-8 max-w-2xl mx-auto amiri-font">
+      نحن نحول أفكارك إلى تجارب رقمية متطورة وحلول تقنية مبتكرة بأسلوب عصري وأنيق
+    </p>
+    <div class="space-x-4">
+      <button class="bg-primary text-light px-8 py-4 rounded-full hover:bg-secondary transition-all hover-lift">
+        Découvrir nos Services
+      </button>
+      <button class="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-light transition-all">
+        Voir Portfolio
+      </button>
+    </div>
+  </div>
+
 </section>
-
-    
-
-            <!-- Additional scattered text fragments -->
-            <div class="absolute top-16 left-1/3 transform rotate-45 text-xs font-serif text-gray-600 opacity-60">
-                "...rivoluzione tecnologica..."
-            </div>
-            <div class="absolute bottom-32 right-1/4 transform -rotate-12 text-xs font-serif text-gray-600 opacity-60">
-                "...design innovativo..."
-            </div>
-            <div class="absolute top-2/3 left-16 transform rotate-6 text-xs font-serif text-gray-600 opacity-60">
-                "...futuro digitale..."
-            </div>
-        </div>
-        
-        <div class="text-center z-10 fade-in">
-            <h1 class="lovelo-font text-4xl md:text-6xl text-dark mb-6">
-                ROLENCE
-            </h1>
-            <p class="text-lg md:text-xl text-secondary mb-8 max-w-2xl mx-auto amiri-font">
-                نحن نحول أفكارك إلى تجارب رقمية متطورة وحلول تقنية مبتكرة بأسلوب عصري وأنيق
-            </p>
-            <div class="space-x-4">
-                <button class="bg-primary text-light px-8 py-4 rounded-full hover:bg-secondary transition-all hover-lift">
-                    Découvrir nos Services
-                </button>
-                <button class="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-light transition-all">
-                    Voir Portfolio
-                </button>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
