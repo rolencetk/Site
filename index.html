@@ -140,19 +140,21 @@
 
     <!-- بطاقة تحت الصيانة -->
 <div id="maintenanceCard" class="hidden fixed inset-0 flex items-center justify-center bg-black/40 z-50">
-  <div class="bg-[#9D9167] text-[#F4F1E8] px-8 py-6 rounded-xl shadow-lg text-center amiri-font text-xl animate-fade-in">
-    الصفحة تحت الصيانة حاليًا 💻
+  <div id="maintenanceMessage" class="bg-[#9D9167] text-[#F4F1E8] px-8 py-6 rounded-xl shadow-lg text-center amiri-font text-xl animate-fade-in max-w-md">
+    <!-- سيتم تغيير النص من الجافاسكريبت -->
   </div>
 </div>
 
 <script>
-  // عناصر الأزرار والبطاقة
+  // العناصر
   const maintenanceCard = document.getElementById('maintenanceCard');
-  const serviceBtn = document.querySelector('button.bg-primary');
-  const portfolioBtn = document.querySelector('button.border-2');
+  const maintenanceMessage = document.getElementById('maintenanceMessage');
+  const serviceBtn = document.querySelector('button.bg-primary'); // Découvrir nos Services
+  const portfolioBtn = document.querySelector('button.border-2'); // Voir Portfolio
 
-  // دالة لعرض البطاقة
-  function showMaintenanceCard() {
+  // دالة لعرض البطاقة مع نص مخصص
+  function showMaintenanceCard(message) {
+    maintenanceMessage.textContent = message;
     maintenanceCard.classList.remove('hidden');
     // تختفي تلقائيًا بعد 3 ثوانٍ
     setTimeout(() => {
@@ -160,11 +162,17 @@
     }, 3000);
   }
 
-  // تشغيل عند الضغط على الأزرار
-  serviceBtn.addEventListener('click', showMaintenanceCard);
-  portfolioBtn.addEventListener('click', showMaintenanceCard);
+  // الزر الأول (الخدمات)
+  serviceBtn.addEventListener('click', () => {
+    showMaintenanceCard('هذا القسم تحت الصيانة حاليًا ⚙️ يمكنك طلب الخدمة عبر ملء الاستمارة في قسم COLLABORONS 💌');
+  });
 
-  // إغلاق عند الضغط خارج البطاقة
+  // الزر الثاني (البورتفوليو)
+  portfolioBtn.addEventListener('click', () => {
+    showMaintenanceCard('هذه الخدمة تحت الصيانة حاليًا ⚙️ شكرًا لتفهمكم 🤍');
+  });
+
+  // إغلاق البطاقة عند الضغط خارجها
   maintenanceCard.addEventListener('click', (e) => {
     if (e.target === maintenanceCard) maintenanceCard.classList.add('hidden');
   });
@@ -180,7 +188,6 @@
     animation: fade-in 0.3s ease-out;
   }
 </style>
-
 </section>
 
     <!-- Services Section -->
