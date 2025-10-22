@@ -138,6 +138,49 @@
     </div>
   </div>
 
+    <!-- بطاقة تحت الصيانة -->
+<div id="maintenanceCard" class="hidden fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+  <div class="bg-[#9D9167] text-[#F4F1E8] px-8 py-6 rounded-xl shadow-lg text-center amiri-font text-xl animate-fade-in">
+    الصفحة تحت الصيانة حاليًا 💻
+  </div>
+</div>
+
+<script>
+  // عناصر الأزرار والبطاقة
+  const maintenanceCard = document.getElementById('maintenanceCard');
+  const serviceBtn = document.querySelector('button.bg-primary');
+  const portfolioBtn = document.querySelector('button.border-2');
+
+  // دالة لعرض البطاقة
+  function showMaintenanceCard() {
+    maintenanceCard.classList.remove('hidden');
+    // تختفي تلقائيًا بعد 3 ثوانٍ
+    setTimeout(() => {
+      maintenanceCard.classList.add('hidden');
+    }, 3000);
+  }
+
+  // تشغيل عند الضغط على الأزرار
+  serviceBtn.addEventListener('click', showMaintenanceCard);
+  portfolioBtn.addEventListener('click', showMaintenanceCard);
+
+  // إغلاق عند الضغط خارج البطاقة
+  maintenanceCard.addEventListener('click', (e) => {
+    if (e.target === maintenanceCard) maintenanceCard.classList.add('hidden');
+  });
+</script>
+
+<!-- ✨ أنيميشن لطيف -->
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+</style>
+
 </section>
 
     <!-- Services Section -->
